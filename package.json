@@ -1,0 +1,8 @@
+{
+  "name": "lambda-rest-serverless",
+  "version": "0.0.1",
+  "description": "A simple code snipset to use for codecamps",
+  "dependencies": {
+    "uuid": "^2.0.3"
+  }
+}

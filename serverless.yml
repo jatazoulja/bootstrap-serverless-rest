@@ -1,0 +1,64 @@
+service: lambda-test-serverless
+
+custom:
+  region: "us-east-2"
+  serviceName: 'test-rest'
+  authorizer: aws_iam
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: prod
+  region: us-east-2
+  environment:
+    DYNAMODB_TABLE: lambdaRestServerlessProd
+
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
+
+functions:
+  create:
+    handler: create.main
+    events:
+      - http:
+          path: ${self:custom.serviceName}
+          method: put
+          cors: true
+          authorizer: ${self:custom.authorizer}
+
+  list:
+    handler: create.list
+    events:
+      - http:
+          path: ${self:custom.serviceName}
+          method: get
+          cors: true
+          authorizer: ${self:custom.authorizer}
+
+  get:
+    handler: create.get
+    events:
+      - http:
+          path: ${self:custom.serviceName}/{id}
+          method: get
+          cors: true
+          authorizer: ${self:custom.authorizer}
+
+  update:
+    handler: create.update
+    events:
+      - http:
+          path: ${self:custom.serviceName}/{id}
+          method: post
+          cors: true
+          authorizer: ${self:custom.authorizer}
+
