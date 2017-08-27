@@ -24,7 +24,6 @@ module.exports.create = function(event, context, callback) {
             updatedAt: timestamp
         }
     };
-
     dynamoDb.put(params, function(error)  {
         // handle potential errors
         if (error) {
