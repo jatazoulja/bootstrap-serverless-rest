@@ -6,7 +6,7 @@ const resp = require('./lib/response.js');
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
-module.exports.create = function(event, context, callback) {
+module.exports.main = function(event, context, callback) {
     const timestamp = new Date().getTime();
     const data = JSON.parse(event.body);
     if (typeof data.text !== 'string') {

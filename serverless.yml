@@ -37,7 +37,7 @@ functions:
             arn: ${self:custom.authorizer}
 
   list:
-    handler: create.list
+    handler: list.main
     events:
       - http:
           path: ${self:custom.serviceName}
@@ -47,7 +47,7 @@ functions:
             arn: ${self:custom.authorizer}
 
   get:
-    handler: create.get
+    handler: get.main
     events:
       - http:
           path: ${self:custom.serviceName}/{id}
@@ -57,7 +57,7 @@ functions:
             arn: ${self:custom.authorizer}
 
   update:
-    handler: create.update
+    handler: update.main
     events:
       - http:
           path: ${self:custom.serviceName}/{id}
