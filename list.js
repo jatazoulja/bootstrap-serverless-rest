@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk'); // eslint-disable-line import/no-extraneous-dependencies
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
-const resp = require('./lib/response');
+const resp = require('./lib/response.js');
 
 module.exports.create = function(event, context, callback) {
 

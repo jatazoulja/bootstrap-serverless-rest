@@ -2,7 +2,7 @@
 
 const uuid = require('uuid');
 const AWS = require('aws-sdk');
-const resp = require('./lib/response');
+const resp = require('./lib/response.js');
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
