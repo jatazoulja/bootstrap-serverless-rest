@@ -173,7 +173,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lambda-test-serverless/prod/1503889085086-2017-08-28T02:58:05.086Z/lambda-test-serverless.zip"
+                "S3Key": "serverless/lambda-test-serverless/prod/1503890020665-2017-08-28T03:13:40.665Z/lambda-test-serverless.zip"
               },
               "FunctionName": "lambda-test-serverless-prod-create",
               "Handler": "create.main",
@@ -197,14 +197,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "CreateLambdaVersiondAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU": {
+          "CreateLambdaVersionbKyOy6yUl2JCInq1W67xkQu0VvvnHTI8WMUZRPSoM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateLambdaFunction"
               },
-              "CodeSha256": "dAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU="
+              "CodeSha256": "bKyOy6yUl2JCInq1W67xkQ+u0VvvnHTI8WMUZR+PSoM="
             }
           },
           "ListLambdaFunction": {
@@ -214,7 +214,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lambda-test-serverless/prod/1503889085086-2017-08-28T02:58:05.086Z/lambda-test-serverless.zip"
+                "S3Key": "serverless/lambda-test-serverless/prod/1503890020665-2017-08-28T03:13:40.665Z/lambda-test-serverless.zip"
               },
               "FunctionName": "lambda-test-serverless-prod-list",
               "Handler": "list.main",
@@ -238,14 +238,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "ListLambdaVersiondAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU": {
+          "ListLambdaVersionbKyOy6yUl2JCInq1W67xkQu0VvvnHTI8WMUZRPSoM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ListLambdaFunction"
               },
-              "CodeSha256": "dAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU="
+              "CodeSha256": "bKyOy6yUl2JCInq1W67xkQ+u0VvvnHTI8WMUZR+PSoM="
             }
           },
           "GetLambdaFunction": {
@@ -255,7 +255,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lambda-test-serverless/prod/1503889085086-2017-08-28T02:58:05.086Z/lambda-test-serverless.zip"
+                "S3Key": "serverless/lambda-test-serverless/prod/1503890020665-2017-08-28T03:13:40.665Z/lambda-test-serverless.zip"
               },
               "FunctionName": "lambda-test-serverless-prod-get",
               "Handler": "get.main",
@@ -279,14 +279,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "GetLambdaVersiondAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU": {
+          "GetLambdaVersionbKyOy6yUl2JCInq1W67xkQu0VvvnHTI8WMUZRPSoM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetLambdaFunction"
               },
-              "CodeSha256": "dAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU="
+              "CodeSha256": "bKyOy6yUl2JCInq1W67xkQ+u0VvvnHTI8WMUZR+PSoM="
             }
           },
           "UpdateLambdaFunction": {
@@ -296,7 +296,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lambda-test-serverless/prod/1503889085086-2017-08-28T02:58:05.086Z/lambda-test-serverless.zip"
+                "S3Key": "serverless/lambda-test-serverless/prod/1503890020665-2017-08-28T03:13:40.665Z/lambda-test-serverless.zip"
               },
               "FunctionName": "lambda-test-serverless-prod-update",
               "Handler": "update.main",
@@ -320,14 +320,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "UpdateLambdaVersiondAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU": {
+          "UpdateLambdaVersionbKyOy6yUl2JCInq1W67xkQu0VvvnHTI8WMUZRPSoM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdateLambdaFunction"
               },
-              "CodeSha256": "dAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU="
+              "CodeSha256": "bKyOy6yUl2JCInq1W67xkQ+u0VvvnHTI8WMUZR+PSoM="
             }
           },
           "ApiGatewayRestApi": {
@@ -638,7 +638,7 @@
               ]
             }
           },
-          "ApiGatewayDeployment1503889085138": {
+          "ApiGatewayDeployment1503890020716": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -795,25 +795,25 @@
           "CreateLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateLambdaVersiondAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU"
+              "Ref": "CreateLambdaVersionbKyOy6yUl2JCInq1W67xkQu0VvvnHTI8WMUZRPSoM"
             }
           },
           "ListLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ListLambdaVersiondAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU"
+              "Ref": "ListLambdaVersionbKyOy6yUl2JCInq1W67xkQu0VvvnHTI8WMUZRPSoM"
             }
           },
           "GetLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetLambdaVersiondAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU"
+              "Ref": "GetLambdaVersionbKyOy6yUl2JCInq1W67xkQu0VvvnHTI8WMUZRPSoM"
             }
           },
           "UpdateLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdateLambdaVersiondAT8W1IWfKf0uppvm6BGLI03KlCn8s8m5spBRY4H5wU"
+              "Ref": "UpdateLambdaVersionbKyOy6yUl2JCInq1W67xkQu0VvvnHTI8WMUZRPSoM"
             }
           },
           "ServiceEndpoint": {
@@ -1025,7 +1025,7 @@
     "artifact": "U:\\Projects\\lambda-rest-serverless\\.serverless\\lambda-test-serverless.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/lambda-test-serverless/prod/1503889085086-2017-08-28T02:58:05.086Z",
+    "artifactDirectoryName": "serverless/lambda-test-serverless/prod/1503890020665-2017-08-28T03:13:40.665Z",
     "artifact": "lambda-test-serverless.zip"
   }
 }
