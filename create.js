@@ -2,6 +2,7 @@
 
 const uuid = require('uuid');
 const AWS = require('aws-sdk');
+const resp = require('./lib/response');
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
@@ -10,7 +11,7 @@ module.exports.create = function(event, context, callback) {
     const data = JSON.parse(event.body);
     if (typeof data.text !== 'string') {
         console.error('Validation Failed');
-        callback(new Error('Couldn\'t create the todo item.'));
+        callback(null, resp.failure({error:'Validation Failed'}));
         return;
     }
 
@@ -25,18 +26,12 @@ module.exports.create = function(event, context, callback) {
         }
     };
     dynamoDb.put(params, function(error)  {
-        // handle potential errors
         if (error) {
             console.error(error);
-            callback(new Error('Couldn\'t create the todo item.'));
+            callback(null, resp.failure(error));
             return;
         }
 
-        // create a response
-        const response = {
-            statusCode: 200,
-            body: JSON.stringify(params.Item)
-        };
-        callback(null, response);
+        callback(null, resp.success(params.Item));
     });
 };

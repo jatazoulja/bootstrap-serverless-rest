@@ -173,7 +173,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lambda-test-serverless/prod/1503835003722-2017-08-27T11:56:43.722Z/lambda-test-serverless.zip"
+                "S3Key": "serverless/lambda-test-serverless/prod/1503886611006-2017-08-28T02:16:51.006Z/lambda-test-serverless.zip"
               },
               "FunctionName": "lambda-test-serverless-prod-create",
               "Handler": "create.main",
@@ -197,14 +197,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "CreateLambdaVersionBQoYSUO48SWm4fYlcrKF7IJIYhVEboVSmf9W9VY": {
+          "CreateLambdaVersionnTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateLambdaFunction"
               },
-              "CodeSha256": "BQoYSUO4/8/SWm4fYlcrKF7I/JIYh+VEboVSmf9W9VY="
+              "CodeSha256": "nTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps="
             }
           },
           "ListLambdaFunction": {
@@ -214,7 +214,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lambda-test-serverless/prod/1503835003722-2017-08-27T11:56:43.722Z/lambda-test-serverless.zip"
+                "S3Key": "serverless/lambda-test-serverless/prod/1503886611006-2017-08-28T02:16:51.006Z/lambda-test-serverless.zip"
               },
               "FunctionName": "lambda-test-serverless-prod-list",
               "Handler": "create.list",
@@ -238,14 +238,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "ListLambdaVersionBQoYSUO48SWm4fYlcrKF7IJIYhVEboVSmf9W9VY": {
+          "ListLambdaVersionnTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ListLambdaFunction"
               },
-              "CodeSha256": "BQoYSUO4/8/SWm4fYlcrKF7I/JIYh+VEboVSmf9W9VY="
+              "CodeSha256": "nTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps="
             }
           },
           "GetLambdaFunction": {
@@ -255,7 +255,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lambda-test-serverless/prod/1503835003722-2017-08-27T11:56:43.722Z/lambda-test-serverless.zip"
+                "S3Key": "serverless/lambda-test-serverless/prod/1503886611006-2017-08-28T02:16:51.006Z/lambda-test-serverless.zip"
               },
               "FunctionName": "lambda-test-serverless-prod-get",
               "Handler": "create.get",
@@ -279,14 +279,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "GetLambdaVersionBQoYSUO48SWm4fYlcrKF7IJIYhVEboVSmf9W9VY": {
+          "GetLambdaVersionnTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetLambdaFunction"
               },
-              "CodeSha256": "BQoYSUO4/8/SWm4fYlcrKF7I/JIYh+VEboVSmf9W9VY="
+              "CodeSha256": "nTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps="
             }
           },
           "UpdateLambdaFunction": {
@@ -296,7 +296,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lambda-test-serverless/prod/1503835003722-2017-08-27T11:56:43.722Z/lambda-test-serverless.zip"
+                "S3Key": "serverless/lambda-test-serverless/prod/1503886611006-2017-08-28T02:16:51.006Z/lambda-test-serverless.zip"
               },
               "FunctionName": "lambda-test-serverless-prod-update",
               "Handler": "create.update",
@@ -320,14 +320,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "UpdateLambdaVersionBQoYSUO48SWm4fYlcrKF7IJIYhVEboVSmf9W9VY": {
+          "UpdateLambdaVersionnTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdateLambdaFunction"
               },
-              "CodeSha256": "BQoYSUO4/8/SWm4fYlcrKF7I/JIYh+VEboVSmf9W9VY="
+              "CodeSha256": "nTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps="
             }
           },
           "ApiGatewayRestApi": {
@@ -466,7 +466,10 @@
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "AuthorizationType": "AWS_IAM",
+              "AuthorizationType": "COGNITO_USER_POOLS",
+              "AuthorizerId": {
+                "Ref": "2Underscoreg5KQWNye0ApiGatewayAuthorizer"
+              },
               "Integration": {
                 "IntegrationHttpMethod": "POST",
                 "Type": "AWS_PROXY",
@@ -491,7 +494,8 @@
                 }
               },
               "MethodResponses": []
-            }
+            },
+            "DependsOn": "2Underscoreg5KQWNye0ApiGatewayAuthorizer"
           },
           "ApiGatewayMethodTestDashrestGet": {
             "Type": "AWS::ApiGateway::Method",
@@ -504,7 +508,10 @@
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "AuthorizationType": "AWS_IAM",
+              "AuthorizationType": "COGNITO_USER_POOLS",
+              "AuthorizerId": {
+                "Ref": "2Underscoreg5KQWNye0ApiGatewayAuthorizer"
+              },
               "Integration": {
                 "IntegrationHttpMethod": "POST",
                 "Type": "AWS_PROXY",
@@ -529,7 +536,8 @@
                 }
               },
               "MethodResponses": []
-            }
+            },
+            "DependsOn": "2Underscoreg5KQWNye0ApiGatewayAuthorizer"
           },
           "ApiGatewayMethodTestDashrestIdVarGet": {
             "Type": "AWS::ApiGateway::Method",
@@ -542,7 +550,10 @@
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "AuthorizationType": "AWS_IAM",
+              "AuthorizationType": "COGNITO_USER_POOLS",
+              "AuthorizerId": {
+                "Ref": "2Underscoreg5KQWNye0ApiGatewayAuthorizer"
+              },
               "Integration": {
                 "IntegrationHttpMethod": "POST",
                 "Type": "AWS_PROXY",
@@ -567,7 +578,8 @@
                 }
               },
               "MethodResponses": []
-            }
+            },
+            "DependsOn": "2Underscoreg5KQWNye0ApiGatewayAuthorizer"
           },
           "ApiGatewayMethodTestDashrestIdVarPost": {
             "Type": "AWS::ApiGateway::Method",
@@ -580,7 +592,10 @@
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "AuthorizationType": "AWS_IAM",
+              "AuthorizationType": "COGNITO_USER_POOLS",
+              "AuthorizerId": {
+                "Ref": "2Underscoreg5KQWNye0ApiGatewayAuthorizer"
+              },
               "Integration": {
                 "IntegrationHttpMethod": "POST",
                 "Type": "AWS_PROXY",
@@ -605,9 +620,25 @@
                 }
               },
               "MethodResponses": []
+            },
+            "DependsOn": "2Underscoreg5KQWNye0ApiGatewayAuthorizer"
+          },
+          "2Underscoreg5KQWNye0ApiGatewayAuthorizer": {
+            "Type": "AWS::ApiGateway::Authorizer",
+            "Properties": {
+              "AuthorizerResultTtlInSeconds": 300,
+              "IdentitySource": "method.request.header.Authorization",
+              "Name": "2_g5KQWNye0",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "Type": "COGNITO_USER_POOLS",
+              "ProviderARNs": [
+                "arn:aws:cognito-idp:us-east-2:606727731259:userpool/us-east-2_g5KQWNye0"
+              ]
             }
           },
-          "ApiGatewayDeployment1503835003769": {
+          "ApiGatewayDeployment1503886611066": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -764,25 +795,25 @@
           "CreateLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateLambdaVersionBQoYSUO48SWm4fYlcrKF7IJIYhVEboVSmf9W9VY"
+              "Ref": "CreateLambdaVersionnTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps"
             }
           },
           "ListLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ListLambdaVersionBQoYSUO48SWm4fYlcrKF7IJIYhVEboVSmf9W9VY"
+              "Ref": "ListLambdaVersionnTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps"
             }
           },
           "GetLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetLambdaVersionBQoYSUO48SWm4fYlcrKF7IJIYhVEboVSmf9W9VY"
+              "Ref": "GetLambdaVersionnTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps"
             }
           },
           "UpdateLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdateLambdaVersionBQoYSUO48SWm4fYlcrKF7IJIYhVEboVSmf9W9VY"
+              "Ref": "UpdateLambdaVersionnTv46pNwjx9SwryvbSezRYbfuvXFMNeOm6E11pWEvps"
             }
           },
           "ServiceEndpoint": {
@@ -823,7 +854,7 @@
     "custom": {
       "region": "us-east-2",
       "serviceName": "test-rest",
-      "authorizer": "aws_iam"
+      "authorizer": "arn:aws:cognito-idp:us-east-2:606727731259:userpool/us-east-2_g5KQWNye0"
     },
     "functions": {
       "create": {
@@ -853,8 +884,11 @@
                 "allowCredentials": false
               },
               "authorizer": {
-                "type": "AWS_IAM",
-                "identitySource": "method.request.header.Authorization"
+                "name": "2_g5KQWNye0",
+                "arn": "arn:aws:cognito-idp:us-east-2:606727731259:userpool/us-east-2_g5KQWNye0",
+                "resultTtlInSeconds": 300,
+                "identitySource": "method.request.header.Authorization",
+                "claims": []
               },
               "integration": "AWS_PROXY"
             }
@@ -891,8 +925,11 @@
                 "allowCredentials": false
               },
               "authorizer": {
-                "type": "AWS_IAM",
-                "identitySource": "method.request.header.Authorization"
+                "name": "2_g5KQWNye0",
+                "arn": "arn:aws:cognito-idp:us-east-2:606727731259:userpool/us-east-2_g5KQWNye0",
+                "resultTtlInSeconds": 300,
+                "identitySource": "method.request.header.Authorization",
+                "claims": []
               },
               "integration": "AWS_PROXY"
             }
@@ -929,8 +966,11 @@
                 "allowCredentials": false
               },
               "authorizer": {
-                "type": "AWS_IAM",
-                "identitySource": "method.request.header.Authorization"
+                "name": "2_g5KQWNye0",
+                "arn": "arn:aws:cognito-idp:us-east-2:606727731259:userpool/us-east-2_g5KQWNye0",
+                "resultTtlInSeconds": 300,
+                "identitySource": "method.request.header.Authorization",
+                "claims": []
               },
               "integration": "AWS_PROXY"
             }
@@ -967,8 +1007,11 @@
                 "allowCredentials": false
               },
               "authorizer": {
-                "type": "AWS_IAM",
-                "identitySource": "method.request.header.Authorization"
+                "name": "2_g5KQWNye0",
+                "arn": "arn:aws:cognito-idp:us-east-2:606727731259:userpool/us-east-2_g5KQWNye0",
+                "resultTtlInSeconds": 300,
+                "identitySource": "method.request.header.Authorization",
+                "claims": []
               },
               "integration": "AWS_PROXY"
             }
@@ -982,7 +1025,7 @@
     "artifact": "U:\\Projects\\lambda-rest-serverless\\.serverless\\lambda-test-serverless.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/lambda-test-serverless/prod/1503835003722-2017-08-27T11:56:43.722Z",
+    "artifactDirectoryName": "serverless/lambda-test-serverless/prod/1503886611006-2017-08-28T02:16:51.006Z",
     "artifact": "lambda-test-serverless.zip"
   }
 }

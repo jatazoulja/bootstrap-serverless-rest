@@ -3,7 +3,7 @@ service: lambda-test-serverless
 custom:
   region: "us-east-2"
   serviceName: 'test-rest'
-  authorizer: aws_iam
+  authorizer: "arn:aws:cognito-idp:us-east-2:606727731259:userpool/us-east-2_g5KQWNye0"
 
 provider:
   name: aws
@@ -33,7 +33,8 @@ functions:
           path: ${self:custom.serviceName}
           method: put
           cors: true
-          authorizer: ${self:custom.authorizer}
+          authorizer:
+            arn: ${self:custom.authorizer}
 
   list:
     handler: create.list
@@ -42,7 +43,8 @@ functions:
           path: ${self:custom.serviceName}
           method: get
           cors: true
-          authorizer: ${self:custom.authorizer}
+          authorizer:
+            arn: ${self:custom.authorizer}
 
   get:
     handler: create.get
@@ -51,7 +53,8 @@ functions:
           path: ${self:custom.serviceName}/{id}
           method: get
           cors: true
-          authorizer: ${self:custom.authorizer}
+          authorizer:
+            arn: ${self:custom.authorizer}
 
   update:
     handler: create.update
@@ -60,5 +63,6 @@ functions:
           path: ${self:custom.serviceName}/{id}
           method: post
           cors: true
-          authorizer: ${self:custom.authorizer}
+          authorizer:
+            arn: ${self:custom.authorizer}
 
