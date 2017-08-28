@@ -11,7 +11,7 @@ provider:
   stage: prod
   region: us-east-2
   environment:
-    DYNAMODB_TABLE: lambdaRestServerlessProd
+    DYNAMODB_TABLE: ${self:custom.serviceName}-db-5
 
   iamRoleStatements:
     - Effect: Allow
@@ -66,3 +66,22 @@ functions:
           authorizer:
             arn: ${self:custom.authorizer}
 
+resources:  # CloudFormation template syntax
+  Resources:
+    usersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.DYNAMODB_TABLE}
+        AttributeDefinitions:
+         - AttributeName: "apiId"
+           AttributeType: "S"
+         - AttributeName: "ownerId"
+           AttributeType: "S"
+        KeySchema:
+         - AttributeName: "apiId"
+           KeyType: "HASH"
+         - AttributeName: "ownerId"
+           KeyType: "RANGE"
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
